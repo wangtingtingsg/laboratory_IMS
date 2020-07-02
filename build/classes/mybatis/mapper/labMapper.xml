@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hxt.dao.labMapper">
+	<select id="login" parameterType="String" resultType="com.hxt.bean.User">
+		SELECT * FROM user_info where user_id=#{user_id}
+	</select>
+	<select id="user_message" parameterType="String" resultType="com.hxt.bean.User">
+		SELECT * FROM user_info where user_id=#{user_id}
+	</select>
+	<select id="labList" resultType="com.hxt.bean.Lab">
+		SELECT * FROM lab_info
+	</select>
+	<select id="isExist" parameterType="String" resultType="java.lang.Integer">
+		SELECT count(*) FROM lab_info where lab_id=#{lab_id}
+	</select>	
+	<select id="labmessage" parameterType="String" resultType="com.hxt.bean.Lab">
+		SELECT * FROM lab_info where lab_id=#{lab_id}
+	</select>
+	<update id="updateLab" parameterType="com.hxt.bean.Lab">
+		UPDATE lab_info SET lab_name=#{lab_name},site=#{site},leader=#{leader},remark=#{remark} WHERE lab_id=#{lab_id}
+	</update>
+	<update id="addLab" >
+	 	INSERT INTO lab_info (lab_id,lab_name,site,leader,remark,state) VALUES (#{lab_id},#{lab_name},#{site},#{leader},#{remark},#{state})
+	</update>
+	<update id="stopLab" parameterType="String">
+		UPDATE lab_info SET state="停用" WHERE lab_id=#{lab_id}
+	</update>
+	<update id="beginLab" parameterType="String">
+		UPDATE lab_info SET state="使用" WHERE lab_id=#{lab_id}
+	</update>
+	
+	
+	
+	<select id="experimentList" parameterType="String" resultType="com.hxt.bean.Experiment">
+		SELECT * FROM experiment_info where lab_id=#{lab_id}
+	</select>
+	<update id="addexper" parameterType="com.hxt.bean.Experiment">
+	 	INSERT INTO experiment_info (experiment_id,experiment_name,lab_id,date,teacher,exact_date) VALUES (#{experiment_id},#{experiment_name},#{lab_id},#{date},#{teacher},#{exact_date})
+	</update>
+	
+	<select id="isExistE" parameterType="String" resultType="java.lang.Integer">
+		SELECT count(*) FROM experiment_info where experiment_id=#{Experiment_id}
+	</select>
+	<select id="MexperimentList" parameterType="String" resultType="com.hxt.bean.Experiment">
+		SELECT * FROM experiment_info where teacher=#{teacher}
+	</select>
+	<select id="stu_appointList" parameterType="String" resultType="com.hxt.bean.stu_Exper">
+		SELECT * FROM stu_appointment where experiment_id=#{experiment_id}
+	</select>
+	<select id="name" parameterType="String" resultType="String">
+		SELECT user_name FROM user_info where user_id=#{user_id}
+	</select>
+	<update id="updatestu" parameterType="com.hxt.bean.stu_Exper">
+		UPDATE stu_appointment SET score=#{score},explan=#{explan} WHERE student_id=#{student_id} and experiment_id=#{experiment_id}
+	</update>
+	
+	
+	<select id="Mstu_appointList" parameterType="String" resultType="com.hxt.bean.stu_Exper">
+		SELECT * FROM stu_appointment where student_id=#{student_id}
+	</select>
+	<select id="allexperimentList" resultType="com.hxt.bean.Experiment">
+		SELECT * FROM experiment_info
+	</select>
+	<update id="addstu_app" parameterType="com.hxt.bean.stu_Exper">
+		INSERT INTO stu_appointment  (experiment_id,student_id) VALUES (#{experiment_id},#{student_id})
+	</update>
+	
+	<update id="password" parameterType="com.hxt.bean.User">
+		UPDATE user_info SET password=#{password} WHERE user_id=#{user_id}
+	</update>
+</mapper>

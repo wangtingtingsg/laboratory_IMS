@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hxt.dao.userMapper">
+	<select id="userList" parameterType="String" resultType="com.hxt.bean.User">
+		SELECT * FROM user_info where role=#{s}
+	</select>
+	<select id="usermessage" parameterType="String" resultType="com.hxt.bean.User">
+		SELECT * FROM user_info where user_id=#{user_id}
+	</select>
+	<select id="isExist" parameterType="String" resultType="java.lang.Integer">
+		SELECT count(*) FROM user_info where user_id=#{user_id}
+	</select>
+	<update id="updateUser" parameterType="com.hxt.bean.User">
+		UPDATE user_info SET role=#{role},user_name=#{user_name},school=#{school},grade=#{grade},uclass=#{uclass},contact=#{contact} WHERE user_id=#{user_id}
+	</update>
+	<update id="addUser" parameterType="com.hxt.bean.User">
+	 	INSERT INTO user_info (user_id,user_name,role,school,grade,uclass,contact,password) VALUES (#{user_id},#{user_name},#{role},#{school},#{grade},#{uclass},#{contact},"123456")
+	</update>
+	<update id="initialize" parameterType="String">
+		UPDATE user_info SET password="123456" WHERE user_id=#{user_id}
+	</update>
+</mapper>

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+.character_name{
+	position: absolute;
+	font-family:'Arial Normal', 'Arial';
+	font-size: 16px;
+}
+.character_describe{
+	position: absolute;
+	font-family:'Arial Normal', 'Arial';
+	font-size: 16px;
+	top:30%;
+	left:35%;
+}
+.actor_table1{
+	border-collapse: collapse;
+	top: 80%;
+	left: 15%;
+	position: absolute;
+	width: 80%;
+	z-index: -100;
+}
+.add_district{
+	border-collapse: collapse;
+	top: 47%;
+	left: 47%;
+	position: absolute;
+	z-index: -100;
+}

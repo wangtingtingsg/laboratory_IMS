@@ -1,0 +1,221 @@
+.top-background { /*顶部背景图*/
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 15%;
+	background-color: rgba(215, 215, 215, 1);
+	z-index: -1;
+}
+
+.top-words { /*顶部字体*/
+	font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+	font-weight: 700;
+	position: absolute;
+	font-size: 32px;
+	text-align: left;
+	left: 40%;
+	top: 20%;
+}
+
+.top-logo { /*顶部logo*/
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	width: 10%;
+	height: 15%;
+	display: flex;
+	background-size: 100% 100%;
+	background-image: url('img/timg (1).jpg');
+}
+
+.top-photo { /*个人资料*/
+	position: absolute;
+	left: 89%;
+	top: 15%;
+	width: 5%;
+	height: 50%;
+	display: flex;
+	background-size: 100% 100%;
+	background-image: url('img/timg (1).jpg');
+}
+
+a.choice:link { /*链接变化*/
+	text-decoration: none;
+}
+
+a.choice:hover { /*链接变化*/
+	font-weight: bold;
+}
+
+.top-leave { /*注销*/
+	position: absolute;
+	left: 95%;
+	top: 20%;
+	color: #000000;
+}
+
+.left-background {/* 左边背景图 */
+	position: absolute;
+	width: 10%;
+	height: 92%;
+	left: 0%;
+	top: 15%;
+	background-color: #868586;
+	z-index: 100;
+}
+
+.menu { /*菜单栏*/
+	position: absolute;
+	width: 96%;
+	height: 5%;
+	background-color: #868586;
+	border-style: solid;
+	border-color: #797979;
+	border-width: 1%;
+	text-align: center;
+	font-size: 13px;
+	font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+	line-height: 225%;
+	z-index: 10;
+}
+
+.words-white { /*字体变成白色*/
+	color: #FFF;
+}
+
+.left-0 { /*位于最右边*/
+	left: 0;
+}
+
+.left-100 { /*子菜单栏位置*/
+	left: 100%;
+	display: none;
+}
+
+.page-head { /*页面子标签*/
+	position: absolute;
+	width: 90%;
+	height: 6%;
+	left: 10%;
+	top: 15%;
+	background-color: #ABBBE6;
+	font-family: 'Arial Negreta', 'Arial Normal', 'Arial';
+	font-weight: 700;
+	font-size: 24px;
+	text-align: center;
+	z-index: -100;
+}
+
+.other-head { /*子标签中的其他选项*/
+	position: absolute;
+	left: 90%;
+	top: 16%;
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 16px;
+	color: #FFFFFF;
+	text-decoration: none;
+	z-index: -100;
+}
+
+.select { /*标准下拉选择框*/
+	width: 23%;
+	height: 5%;
+	top: 30%;
+	left: 15%;
+	position: absolute;
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 13px;
+	z-index: -100;
+}
+
+.search { /*标准搜索框*/
+	width: 12%;
+	height: 3%;
+	position: absolute;
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 13px;
+	top: 32%;
+	left: 80%;
+	border-color: #797979;
+	border-style: solid;
+	border-width: 1px;
+	z-index: -100;
+}
+
+.search-button { /*搜索按钮*/
+	position: absolute;
+	width: 4%;
+	height: 3.7%;
+	top: 32%;
+	left: 93%;
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 13px;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	z-index: -100;
+}
+
+.table { /*表格格式*/
+	border-collapse: collapse;
+	top: 40%;
+	left: 15%;
+	position: absolute;
+	width: 80%;
+	z-index: -100;
+}
+
+table { /*表格格式*/
+	border-collapse: collapse;
+}
+
+table, td, th { /*表格格式*/
+	border: 1px solid black;
+}
+
+.table-font { /*表格文字标准*/
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 16px;
+	text-decoration: none;
+	color: #333333;
+}
+
+.center { /*文字居中*/
+	text-align: center;
+}
+
+.background-gray { /*背景变灰*/
+	background-color: #D7D7D7;
+}
+
+.select_font { /*正倒序选择字体*/
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 16px;
+	text-decoration: none;
+	color: #333333;
+	top: 31%;
+	position: absolute;
+	z-index: -100;
+}
+
+.page_button { /*上下页按键的格式*/
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 16px;
+	text-decoration: none;
+	color: #333333;
+	position: absolute;
+	width: 8%;
+	height: 5%;
+	z-index: -100;
+}
+
+.color_gray { /*字颜色变灰*/
+	color: #a8a8a8;
+}
+
+.page_format { /*提示页面信息格式*/
+	position: absolute;
+	left: 17%;
+	z-index: -100;
+	height: 100px;
+}

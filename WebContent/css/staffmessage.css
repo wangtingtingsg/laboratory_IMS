@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+.photo { /*照片格式*/
+	width: 15%;
+	height: 40%;
+	top: 30%;
+	left: 27%;
+	position: absolute;
+	border-color: #000;
+	border-style: solid;
+	border-width: 1px;
+	z-index: -100;
+}
+
+.message_font { /*信息字体*/
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 20px;
+	position: absolute;
+	z-index: -100;
+}
+
+.message_remark { /*备注字体*/
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 14px;
+	position: absolute;
+	z-index: -100;
+	top: 124%;
+	left: 27%;
+	width: 40%;
+	height: 30%;
+	resize: none;
+}
+
+.upload_photo { /*添加图片按钮*/
+	position: absolute;
+	top: 25%;
+	left: 30%;
+	z-index: -100;
+}
+
+.addstaff_button { /*添加员工按钮*/
+	position: absolute;
+	top: 160%;
+	left: 70%;
+	z-index: -100;
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 26px;
+}
+
+.border-red { /*外框变红*/
+	border-style: solid;
+	border-color: red;
+}
+.error_font{/*错误字体*/
+	font-family: 'Arial Normal', 'Arial';
+	font-size: 12px;
+	color:red;
+	position: absolute;
+	width: 100%;
+}
+.attendance_option{/*考勤下拉框*/
+	position: absolute;
+	top:80%;
+	left: 23%;
+	z-index: -100;
+}
+.attendance_table{/*考勤表*/
+	position: absolute;
+	top:85%;
+	left: 22%;
+	z-index: -100;
+	width: 60%;
+}
